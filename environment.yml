@@ -1,0 +1,7 @@
+name: workshop
+channels:
+  - jochym
+  - conda-forge
+dependencies:
+  - python=3.5
+  - ase

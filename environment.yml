@@ -2,7 +2,9 @@ name: workshop
 channels:
   - jochym
   - conda-forge
+  - vdbwrair
 dependencies:
   - python=3.5
   - ase
   - ipycache
+  - imagemagick

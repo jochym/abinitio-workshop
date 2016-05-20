@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="119.62mm" width="144.88mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 513.34224 423.86249">
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="139.62mm" width="250mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 885.82677 494.72863">
  <defs id="defs4">
   <marker id="marker4644" refY="0" refX="0" overflow="visible" orient="auto">
    <path id="path4646" d="m0 0 5-5-17.5 5 17.5 5-5-5z" fill-rule="evenodd" transform="matrix(-.8 0 0 -.8 -10 0)" stroke="#000" stroke-width="1pt"/>
@@ -24,7 +24,7 @@
    </cc:Work>
   </rdf:RDF>
  </metadata>
- <g id="layer1" transform="translate(-70.866 -184.25)">
+ <g id="layer1" transform="translate(-35.433 -148.82)">
   <g id="g4158">
    <rect id="rect4136" rx="37.177" ry="34.314" height="106.3" width="194.88" y="184.25" x="70.866" fill="#ffda87"/>
    <text id="text4142" style="word-spacing:0px;letter-spacing:0px;text-align:justify" font-size="30px" line-height="125%" y="229.30832" x="111.42721" font-family="&apos;Trebuchet MS&apos;" xml:space="preserve" fill="#000000"><tspan id="tspan4144" y="229.30832" x="111.42721">Program</tspan><tspan id="tspan4146" y="266.80832" x="111.42721">ab-initio</tspan></text>
@@ -46,6 +46,10 @@
    <path id="path4206" marker-end="url(#marker4570)" d="m265.75 406.6 88.14-31.25"/>
    <path id="path4208" marker-end="url(#marker4604)" d="m353.89 297.34-90.42-29.21"/>
    <path id="path4210" marker-end="url(#marker4644)" d="m469.05 431.97 0.00001 87.562"/>
+  </g>
+  <g id="g4912">
+   <rect id="rect4894" rx="37.177" ry="34.314" height="177.17" width="283.46" y="343.7" x="602.36" fill="#ffda87"/>
+   <text id="text4896" style="word-spacing:0px;letter-spacing:0px;text-anchor:middle;text-align:center" font-size="30px" line-height="125%" y="402.76688" x="744.08716" font-family="&apos;Trebuchet MS&apos;" xml:space="preserve" fill="#000000"><tspan id="tspan4904" y="402.76688" x="748.59888">Eksperyment, </tspan><tspan id="tspan4908" y="440.26688" x="744.08716">inne publikacje,</tspan><tspan id="tspan4910" y="477.76688" x="744.08716">współpracownicy</tspan></text>
   </g>
  </g>
 </svg>

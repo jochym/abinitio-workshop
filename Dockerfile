@@ -7,7 +7,7 @@ USER root
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install -y imagemagick povray abinit abinit-data abinit-doc gpaw gpaw-data && apt-get clean
+RUN apt-get install -y imagemagick povray abinit abinit-data abinit-doc && apt-get clean
 
 USER main
 

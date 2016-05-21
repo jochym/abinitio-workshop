@@ -10,5 +10,5 @@ RUN apt-get install -y imagemagick povray && apt-get clean
 
 USER main
 
-conda install --yes -c jochym ase
-conda env list
+RUN conda install --yes -c jochym ase
+RUN conda env list

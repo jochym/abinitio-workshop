@@ -14,12 +14,10 @@ USER main
 RUN conda config --add channels conda-forge
 RUN conda config --add channels jochym
 RUN conda create -y -n binder ase spglib jupyter
-RUN conda install -y -n python3 ase spglib jupyter
+#RUN conda install -y -n python3 ase spglib jupyter
 RUN conda env list
 
 RUN echo "export PATH=/home/main/anaconda2/envs/binder/bin/:$PATH" >> ~/.binder_start
-#RUN echo 'export ASE_ABINIT_COMMAND="abinit < PREFIX.files > PREFIX.log"' >> ~/.binder_start
-#RUN echo "export ABINIT_PP_PATH=/usr/share/abinit/psp/" >> ~/.binder_start
 RUN /bin/bash -c "source activate binder && jupyter kernelspec install-self --user"
 
 ADD repo $HOME/notebooks

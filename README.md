@@ -15,7 +15,7 @@ Zeszyty można także oglądnąć i eksperymentować na nich otwierając je w se
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/jochym/abinitio-workshop) 
 
-**Uwaga:** *Niestety, serwis binder jest w fazie beta i nie zawsze funkcjonuje. Jeśli powyższy link nie działa trzeba odłożyć eksperymenty na inny dzień*
+**Uwaga:** *Niestety, serwis binder jest w fazie beta i nie zawsze funkcjonuje. Jeśli powyższy link nie działa trzeba odłożyć eksperymenty na inny dzień.*
 
 *Wszystkie przykłady oraz konieczne dane a także pełny tekst prezentacji znajduje się w repozytorium.*
 

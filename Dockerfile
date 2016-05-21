@@ -13,7 +13,8 @@ USER main
 
 RUN conda config --add channels conda-forge
 RUN conda config --add channels jochym
-RUN conda create -y -n binder jupyter ase python=3.5
+RUN conda create -y -n binder python=3.5 jupyter anaconda ase
+#RUN conda install -y ase jupyter
 RUN conda env list
 
 RUN echo "export PATH=/home/main/anaconda2/envs/binder/bin/:$PATH" >> ~/.binder_start

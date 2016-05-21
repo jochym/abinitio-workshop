@@ -7,7 +7,7 @@ USER root
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install -y imagemagick povray abinit abinit-doc pandoc && apt-get clean
+RUN apt-get install -y imagemagick povray abinit abinit-doc && apt-get clean
 
 USER main
 
@@ -18,7 +18,7 @@ RUN conda install -y -n python3 ase spglib jupyter
 RUN conda env list
 
 RUN echo "export PATH=/home/main/anaconda2/envs/binder/bin/:$PATH" >> ~/.binder_start
-#RUN echo 'export ASE_ABINIT_COMMAND="abinis < PREFIX.files > PREFIX.log"' >> ~/.binder_start
+#RUN echo 'export ASE_ABINIT_COMMAND="abinit < PREFIX.files > PREFIX.log"' >> ~/.binder_start
 #RUN echo "export ABINIT_PP_PATH=/usr/share/abinit/psp/" >> ~/.binder_start
 RUN /bin/bash -c "source activate binder && jupyter kernelspec install-self --user"
 

@@ -1,14 +1,30 @@
 FROM andrewosh/binder-base
 
-MAINTAINER Andrew Osheroff <andrewosh@gmail.com>
+MAINTAINER Pawel T.  Jochym <pawel.jochym@ifj.edu.pl>
 
 USER root
 
-# Add Julia dependencies
+# Add dependencies
+RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install -y imagemagick povray && apt-get clean
+RUN apt-get install -y imagemagick povray abinit abinit-data abinit-doc gpaw gpaw-data && apt-get clean
 
 USER main
 
-RUN conda install --yes -c jochym ase
+RUN conda config --add channels jochym conda-forge
+RUN conda create --yes -n binder jupyter ase python=3.5
 RUN conda env list
+
+RUN echo "export PATH=/home/main/anaconda2/envs/binder/bin/,$PATH" >> ~/.binder_start
+
+RUN /bin/bash -c "source activate binder && ipython kernelspec install-self --user"
+
+ADD repo $HOME/notebooks
+
+USER root
+RUN chown -R main,main $HOME/notebooks
+
+USER main
+RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+
+WORKDIR $HOME/notebooks

@@ -1,4 +1,4 @@
-# Warsztaty obliczeniowych metod ab-initio
+# Warsztaty modelowania w nanofizyce
 
 Zakład Komputerowych Badań Materiałów
 

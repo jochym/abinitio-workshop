@@ -11,7 +11,8 @@ RUN apt-get install -y imagemagick povray abinit abinit-data abinit-doc && apt-g
 
 USER main
 
-RUN conda config --add channels jochym conda-forge
+RUN conda config --add channels conda-forge
+RUN conda config --add channels jochym
 RUN conda create --yes -n binder jupyter ase python=3.5
 RUN conda env list
 

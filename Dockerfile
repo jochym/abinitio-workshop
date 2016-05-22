@@ -18,7 +18,7 @@ RUN conda create -y -n binder ase spglib jupyter
 RUN conda env list
 
 RUN echo "export PATH=/home/main/anaconda2/envs/binder/bin/:$PATH" >> ~/.binder_start
-RUN /bin/bash -c "source activate binder && jupyter kernelspec install-self --user"
+#RUN /bin/bash -c "source activate binder && jupyter kernelspec install-self --user"
 
 ADD repo $HOME/notebooks
 

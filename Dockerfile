@@ -7,7 +7,11 @@ USER root
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get install -y imagemagick povray abinit abinit-doc pandoc texlive-latex-base && apt-get clean
+
+# Basic dependencies
+RUN apt-get install -y imagemagick povray abinit abinit-doc && apt-get clean
+# Non-essential dependencies
+RUN apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended && apt-get clean
 
 USER main
 

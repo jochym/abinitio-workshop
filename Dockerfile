@@ -11,7 +11,7 @@ RUN apt-get update
 # Basic dependencies
 RUN apt-get install -y imagemagick povray abinit abinit-doc && apt-get clean
 # Non-essential dependencies
-RUN apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended && apt-get clean
+RUN apt-get install -y pandoc texlive-latex-recommended texlive-fonts-recommended && apt-get clean
 
 USER main
 

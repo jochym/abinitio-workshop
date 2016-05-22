@@ -22,10 +22,10 @@ RUN /bin/bash -c "source activate binder && jupyter kernelspec install-self --us
 
 #ADD repo $HOME/notebooks
 
-USER root
-RUN chown -R main:main $HOME/notebooks
+#USER root
+#RUN chown -R main:main $HOME/notebooks
 
-USER main
-RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
+#USER main
+#RUN find $HOME/notebooks -name '*.ipynb' -exec ipython trust {} \;
 
-WORKDIR $HOME/notebooks
+#WORKDIR $HOME/notebooks

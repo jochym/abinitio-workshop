@@ -14,7 +14,7 @@ USER main
 RUN conda config --add channels conda-forge
 RUN conda config --add channels jochym
 RUN conda create -y -n binder ase spglib jupyter
-RUN conda install -y -n python3 ase spglib
+#RUN conda install -y -n python3 ase spglib
 RUN conda env list
 
 RUN echo "export PATH=/home/main/anaconda2/envs/binder/bin/:$PATH" >> ~/.binder_start

@@ -9,7 +9,7 @@ RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update
 
 # Basic dependencies
-RUN apt-get install -y imagemagick povray abinit abinit-doc && apt-get clean
+RUN apt-get install -y imagemagick povray ffmpeg abinit abinit-doc && apt-get clean
 # Non-essential dependencies
 RUN apt-get install -y pandoc texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
 

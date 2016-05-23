@@ -6,6 +6,7 @@ USER root
 
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
+RUN echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list.d/debian-multimedia.list
 RUN apt-get update
 
 # Basic dependencies

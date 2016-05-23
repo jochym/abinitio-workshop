@@ -1,0 +1,20 @@
+/*
+Aller/Aller_Bd.ttf
+Aller/Aller_BdIt.ttf
+Aller/AllerDisplay.ttf
+Aller/Aller_It.ttf
+Aller/Aller_Lt.ttf
+Aller/Aller_LtIt.ttf
+Aller/Aller_Rg.ttf
+*/
+
+@font-face {
+    font-family: 'Aller';
+    src: url('Aller_Rg.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+font-family: 'Aller', 'Arial', sans-serif;
+}

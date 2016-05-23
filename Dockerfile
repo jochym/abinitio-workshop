@@ -10,6 +10,8 @@ RUN echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/so
 RUN apt-get update
 
 # Basic dependencies
+RUN apt-get install -y --force-yes deb-multimedia-keyring
+RUN apt-get update
 RUN apt-get install -y imagemagick povray ffmpeg abinit abinit-doc && apt-get clean
 # Non-essential dependencies
 RUN apt-get install -y pandoc texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean

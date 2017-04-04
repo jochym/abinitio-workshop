@@ -64,3 +64,18 @@ notebooks/img
 notebooks/abinit_psp
 notebooks/temp
 
+# Calc results
+diamo_*
+notebooks/*.png
+notebooks/*.pdf
+notebooks/diam.*
+
+# Povs
+*.ini
+*.pov
+
+# Editors
+*.swp
+*~
+
+

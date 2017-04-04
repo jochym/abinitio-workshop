@@ -1,0 +1,17 @@
+#!/bin/bash
+
+( cd img
+    for t in T* ; do 
+    (cd $t
+        echo $t
+        # Przeskalowanie kadrów do wspólnego rozmiaru
+        for f in md_T*_*.png ; do 
+            convert $f -resize 960x720 -gravity center -background "white" \
+                -extent 960x720 amd.png 
+            mv amd.png $f 
+        done
+        ffmpeg -framerate 20 -i md_${t}_%04d.png -s 960:720 -vf scale=-1:720 \
+            -v 0 -y -vcodec libvpx -quality 'good' ../../anim_${t}.webm
+    )
+    done
+)

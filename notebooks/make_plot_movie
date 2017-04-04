@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Produkcja filmu w formacie webm
+
+for i in img/anim_e_*.png ; do 
+    n=${i%%.png}
+    n=${n##img/anim_e_}
+    n=${n##0}
+    n=$(( n - 700 ))
+    printf -v n "img/anim_f_%04d.png" $n
+    mv $i $n
+done
+
+
+ffmpeg -framerate 20 -i img/anim_f_%04d.png -s:v 960:720 -vf scale=-1:720 \
+            -vcodec libvpx -quality 'good' -y anim_e.webm

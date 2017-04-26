@@ -22,6 +22,8 @@ RUN conda config --add channels conda-forge
 RUN conda config --add channels jochym
 RUN conda create -y -n binder ase spglib jupyter nglview
 RUN conda install -y -n python3 ase spglib jupyter nglview
+RUN conda install -y -n binder -c damianavila82 rise
+RUN conda install -y -n python3 -c damianavila82 rise
 
 RUN echo "export PATH=/home/main/anaconda2/envs/binder/bin/:$PATH" >> ~/.binder_start
 RUN /bin/bash -c "source activate binder && jupyter kernelspec install-self --user"

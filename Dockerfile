@@ -26,6 +26,7 @@ RUN conda install -y -n binder -c damianavila82 rise
 RUN conda install -y -n python3 -c damianavila82 rise
 
 RUN echo "export PATH=/home/main/anaconda2/envs/binder/bin/:$PATH" >> ~/.binder_start
-RUN /bin/bash -c "source activate binder && jupyter kernelspec install-self --user"
+#RUN /bin/bash -c "source activate binder && jupyter kernelspec install-self --user"
+RUN /bin/bash -c "source activate binder && ipython kernel install --user"
 
 

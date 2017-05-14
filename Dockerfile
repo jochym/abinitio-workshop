@@ -1,32 +1,27 @@
-FROM andrewosh/binder-base
+FROM jupyter/scipy-notebook
 
 MAINTAINER Pawel T.  Jochym <pawel.jochym@ifj.edu.pl>
+
+RUN conda config --add channels conda-forge
+RUN conda config --add channels jochym
+RUN conda install -y ase spglib nglview elastic
+RUN conda install -y -c damianavila82 rise
+
+RUN git clone https://github.com/jochym/abinitio-workshop.git /home/jovyan/work
+#RUN cp -r notebooks /home/jovyan/work 
 
 USER root
 
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
-RUN echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list.d/debian-multimedia.list
+#RUN echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list.d/debian-multimedia.list
 RUN apt-get update
+RUN apt-get -y install abinit povray imagemagick && apt-get clean
 
 # Basic dependencies
-RUN apt-get install -y --force-yes deb-multimedia-keyring
-RUN apt-get update
-RUN apt-get install -y imagemagick povray ffmpeg abinit abinit-doc && apt-get clean
+#RUN apt-get install -y --force-yes deb-multimedia-keyring
+#RUN apt-get update
+#RUN apt-get install -y imagemagick povray ffmpeg abinit abinit-doc && apt-get clean
 # Non-essential dependencies
-RUN apt-get install -y pandoc texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
-
-USER main
-
-RUN conda config --add channels conda-forge
-RUN conda config --add channels jochym
-RUN conda create -y -n binder ase spglib jupyter nglview
-RUN conda install -y -n python3 ase spglib jupyter nglview
-RUN conda install -y -n binder -c damianavila82 rise
-RUN conda install -y -n python3 -c damianavila82 rise
-
-RUN echo "export PATH=/home/main/anaconda2/envs/binder/bin/:$PATH" >> ~/.binder_start
-#RUN /bin/bash -c "source activate binder && jupyter kernelspec install-self --user"
-RUN /bin/bash -c "source activate binder && ipython kernel install --user"
-
+# RUN apt-get install -y pandoc texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
 

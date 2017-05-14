@@ -22,7 +22,7 @@ RUN apt-get update
 RUN apt-get -y install abinit abinit-doc povray imagemagick && apt-get clean
 
 # Non-essential dependencies
-RUN apt-get install -y pandoc texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
+RUN apt-get install -y htop pandoc texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
 
 # Extra dependencies
 #RUN echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list.d/debian-multimedia.list

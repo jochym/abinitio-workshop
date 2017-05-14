@@ -8,6 +8,7 @@ RUN conda install -y ase spglib nglview elastic phonopy
 RUN conda install -y -c damianavila82 rise
 
 RUN git clone https://github.com/jochym/abinitio-workshop.git /home/jovyan/work
+RUN cd /home/jovyan/work && git submodule init && git submodule update
 
 USER root
 

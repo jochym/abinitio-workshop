@@ -6,6 +6,7 @@ RUN conda config --add channels conda-forge
 RUN conda config --add channels jochym
 RUN conda install -y ase spglib nglview elastic phonopy
 RUN conda install -y -c damianavila82 rise
+RUN conda update -y --all
 
 RUN git clone https://github.com/jochym/abinitio-workshop.git /home/jovyan/work
 RUN cd /home/jovyan/work && git submodule init && git submodule update

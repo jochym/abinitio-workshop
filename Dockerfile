@@ -9,11 +9,12 @@ RUN conda install -y -c damianavila82 rise
 RUN conda update -y --all
 
 #RUN git clone https://github.com/jochym/abinitio-workshop.git /home/jovyan/work
-COPY . /home/jovyan/work
-RUN chown -R jovyan:users /home/jovyan/work
-RUN cd /home/jovyan/work && git submodule init && git submodule update
 
 USER root
+
+COPY . /home/jovyan/work
+RUN cd /home/jovyan/work && git submodule init && git submodule update
+RUN chown -R jovyan:users /home/jovyan/work
 
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list

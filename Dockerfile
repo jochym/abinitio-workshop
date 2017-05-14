@@ -15,8 +15,6 @@ RUN cd /home/jovyan/work && git submodule init && git submodule update
 
 USER root
 
-# Add port for presentations
-EXPOSE 8000
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update
@@ -24,7 +22,6 @@ RUN apt-get -y install abinit abinit-doc povray imagemagick && apt-get clean
 
 # Non-essential dependencies
 RUN apt-get install -y pandoc texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
-
 
 # Extra dependencies
 #RUN echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list.d/debian-multimedia.list

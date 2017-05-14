@@ -4,14 +4,15 @@ MAINTAINER Pawel T.  Jochym <pawel.jochym@ifj.edu.pl>
 
 RUN conda config --add channels conda-forge
 RUN conda config --add channels jochym
-RUN conda install -y ase spglib nglview elastic
+RUN conda install -y ase spglib nglview elastic phonopy
 RUN conda install -y -c damianavila82 rise
 
 RUN git clone https://github.com/jochym/abinitio-workshop.git /home/jovyan/work
-#RUN cp -r notebooks /home/jovyan/work 
 
 USER root
 
+# Add port for presentations
+EXPOSE 8000
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 #RUN echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list.d/debian-multimedia.list

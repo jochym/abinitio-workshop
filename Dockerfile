@@ -12,6 +12,7 @@ USER jovyan
 RUN conda config --add channels conda-forge
 RUN conda config --add channels jochym
 RUN conda install -y scipy numpy matplotlib ase spglib nglview elastic phonopy elastic
+RUN conda install -y jupyter_contrib_nbextensions 
 RUN conda install -y -c damianavila82 rise
 RUN conda update -y --all
 RUN conda clean -tipsy

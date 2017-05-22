@@ -30,6 +30,8 @@ RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get -y install abinit povray imagemagick && apt-get clean
 
+USER jovyan
+
 # Non-essential dependencies
 #RUN apt-get install -y htop abinit-doc pandoc texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
 

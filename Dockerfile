@@ -5,7 +5,8 @@ MAINTAINER Pawel T.  Jochym <pawel.jochym@ifj.edu.pl>
 USER root
 
 RUN apt-get update
-RUN apt-get -y install git
+RUN apt-get -qy upgrade
+RUN apt-get -qy install git
 
 USER jovyan
 
@@ -28,7 +29,7 @@ RUN chown -R jovyan:users /home/jovyan/work
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update
-RUN apt-get -y install abinit povray imagemagick && apt-get clean
+RUN apt-get -qy install abinit povray imagemagick && apt-get clean
 
 USER jovyan
 

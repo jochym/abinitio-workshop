@@ -8,9 +8,11 @@ RUN apt-get update
 RUN apt-get -qy upgrade
 RUN apt-get -qy install git
 
+COPY . /home/jovyan/work
+RUN chown -R jovyan:users /home/jovyan/work
+
 USER jovyan
 
-COPY . /home/jovyan/work
 RUN cd /home/jovyan/work && git submodule init && git submodule update
 
 RUN conda config --add channels conda-forge
@@ -23,8 +25,6 @@ RUN conda update -y --all
 RUN conda clean -tipsy
 
 USER root
-
-RUN chown -R jovyan:users /home/jovyan/work
 
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list

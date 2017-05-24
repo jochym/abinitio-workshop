@@ -10,6 +10,9 @@ RUN apt-get -qy install git
 
 USER jovyan
 
+COPY . /home/jovyan/work
+RUN cd /home/jovyan/work && git submodule init && git submodule update
+
 RUN conda config --add channels conda-forge
 RUN conda config --add channels jochym
 RUN conda install -y scipy numpy matplotlib ase spglib nglview elastic phonopy
@@ -18,9 +21,6 @@ RUN conda install -y -c damianavila82 rise
 RUN conda install -y -c vpython vpython vpnotebook
 RUN conda update -y --all
 RUN conda clean -tipsy
-
-RUN git clone https://github.com/jochym/abinitio-workshop.git /home/jovyan/work
-RUN cd /home/jovyan/work && git submodule init && git submodule update
 
 USER root
 

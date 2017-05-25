@@ -16,8 +16,7 @@ RUN apt-get install -qy htop abinit-doc pandoc
 RUN apt-get install -qy texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
 
 # Extra dependencies
-RUN echo "deb http://www.deb-multimedia.org jessie main non-free" >> /etc/apt/sources.list.d/debian-multimedia.list
-RUN apt-get install -y --force-yes deb-multimedia-keyring
+RUN echo "deb http://cdn.debian.net/debian jessie-backports main contrib non-free" >> /etc/apt/sources.list.d/debian-backports.list
 RUN apt-get update
 RUN apt-get install -y ffmpeg && apt-get clean
 

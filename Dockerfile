@@ -6,6 +6,8 @@ USER root
 
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
+RUN echo "deb http://cdn-fastly.deb.debian.org/debian jessie-backports main contrib non-free" > /etc/apt/sources.list.d/backports.list
+
 RUN apt-get update
 RUN apt-get -qy upgrade
 RUN apt-get -qy install git apt-utils
@@ -16,7 +18,6 @@ RUN apt-get install -qy htop abinit-doc pandoc
 RUN apt-get install -qy texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
 
 # Extra dependencies
-RUN echo "deb http://cdn.debian.net/debian jessie-backports main contrib non-free" >> /etc/apt/sources.list.d/debian-backports.list
 RUN apt-get update
 RUN apt-get install -y ffmpeg && apt-get clean
 

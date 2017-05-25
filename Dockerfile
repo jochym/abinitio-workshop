@@ -8,7 +8,7 @@ USER root
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get -qy upgrade
-RUN apt-get -qy install git
+RUN apt-get -qy install git apt-utils
 RUN apt-get -qy install abinit povray imagemagick && apt-get clean
 
 # Non-essential dependencies

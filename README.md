@@ -13,7 +13,7 @@ Materiały ćwiczeniowe i obliczenia pomocnicze zawarte są w kartotece [noteboo
 
 Zeszyty można także oglądnąć i eksperymentować na nich otwierając je w serwisie binder. Jedynym wymaganiem jest posiadanie działającej, współczesnej przeglądarki WWW (np. firefox,chrome,safari). Wystarczy kliknąć poniższą ikonę.
 
-[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/repo/jochym/abinitio-workshop) 
+[![Binder](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/jochym/abinitio-workshop/master) 
 
 **Uwaga:** *Niestety, serwis binder jest w fazie beta i nie zawsze funkcjonuje. Jeśli powyższy link nie działa trzeba odłożyć eksperymenty na inny dzień.*
 

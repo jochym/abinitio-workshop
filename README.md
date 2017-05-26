@@ -4,7 +4,7 @@ Zakład Komputerowych Badań Materiałów
 
 Instytut Fizyki Jądrowej PAN, Kraków
 
-Poniższe materiały mają formę zbioru zeszytów [Jupyter](https://jupyter.org/) dostępnych w publicznym repozytorium:
+Zawarte w kartotece materiały mają formę zbioru zeszytów [Jupyter](https://jupyter.org/) dostępnych w publicznym repozytorium:
 [https://github.com/jochym/abinitio-workshop](https://github.com/jochym/abinitio-workshop). 
 
 Prezentacja dostępna jest w serwisie [nbviewer](https://nbviewer.ipython.org/) w postaci [slajdów](https://nbviewer.ipython.org/format/slides/github/jochym/abinitio-workshop/blob/master/notebooks/Prezentacja.ipynb)  lub jako [plik źródłowy](https://nbviewer.ipython.org/github/jochym/abinitio-workshop/blob/master/notebooks/Prezentacja.ipynb). 

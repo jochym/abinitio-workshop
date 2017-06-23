@@ -6,7 +6,7 @@ USER root
 
 # Add dependencies
 RUN sed 's/main/main contrib non-free/g' /etc/apt/sources.list
-RUN echo "deb http://cdn-fastly.deb.debian.org/debian jessie-backports main contrib non-free" > /etc/apt/sources.list.d/backports.list
+RUN echo "deb http://deb.debian.org/debian jessie-backports main contrib non-free" > /etc/apt/sources.list.d/backports.list
 
 RUN apt-get update
 RUN apt-get -qy upgrade

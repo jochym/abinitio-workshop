@@ -7,10 +7,10 @@ USER root
 RUN apt-get update
 RUN apt-get -qy upgrade
 RUN apt-get -qy install git apt-utils
-RUN apt-get -qy install abinit povray imagemagick && apt-get clean
+RUN apt-get -qy install povray imagemagick && apt-get clean
 
 # Non-essential dependencies
-RUN apt-get install -qy htop abinit-doc pandoc 
+RUN apt-get install -qy htop pandoc 
 RUN apt-get install -qy texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra && apt-get clean
 
 # Extra dependencies
@@ -21,14 +21,15 @@ RUN apt-get clean
 
 # Conda deps
 USER jovyan
-RUN conda config --add channels conda-forge
-RUN conda config --add channels jochym
-RUN conda install -y scipy numpy matplotlib ase spglib nglview elastic phonopy
-RUN conda install -y jupyter_contrib_nbextensions 
-RUN conda install -y -c damianavila82 rise
-RUN conda install -y -c vpython vpython vpnotebook
-RUN conda update -y --all
-RUN conda clean -tipsy
+RUN conda install mamba
+RUN mamba config --add channels jochym
+RUN mamba install -y scipy numpy matplotlib ase spglib nglview elastic phonopy
+RUN mamba install -y jupyter_contrib_nbextensions 
+RUN mamba install -y -c damianavila82 rise
+RUN mamba install -y vpython
+RUN mamba install -y abinit
+RUN mamba update -y --all
+RUN mamba clean -y --all
 
 # Materials
 USER root
